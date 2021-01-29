@@ -1,0 +1,19 @@
+server:  
+  port: 0
+
+keycloak:
+  realm: DemoFlavourDB
+  auth-server-url: host.docker.internal:8080/auth
+  ssl-required: external
+  resource: springboot-microservice
+  credentials:
+    secret: a8450b7f-eb08-40af-a9c2-8cb0fd3f53f9
+  use-resource-role-mappings: true
+  bearer-only: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://host.docker.internal:9001/eureka}
+  instance:
+    preferIpAddress: true
