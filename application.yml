@@ -3,7 +3,7 @@ server:
 
 keycloak:
   realm: DemoFlavourDB
-  auth-server-url: host.docker.internal:8080/auth
+  auth-server-url: http://host.docker.internal:8080/auth
   ssl-required: external
   resource: springboot-microservice
   credentials:
